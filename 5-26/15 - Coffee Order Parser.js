@@ -80,3 +80,36 @@ function formatCoffeeOrder(order) {
 }
 
 formatCoffeeOrder("Just an espresso please.")
+
+// MUCH better, cleaner, and faster solution using a map and iterating through that instead of an object:
+
+// const ingredients = new Map([
+// ["cold brew", 4.50],
+// ["oat latte", 5.00],
+// ["cappuccino", 4.75],
+// ["espresso", 3.00],
+// ["vanilla syrup", 0.75],
+// ["caramel drizzle", 0.60],
+// ["extra shot", 0.50],
+// ["oat milk", 0.75],
+// ["cream", 0.75],
+// ])
+
+// function formatCoffeeOrder(order) {
+//   let items = []
+//   let total = 0
+
+//   for (const [item, price] of ingredients) {
+//     if (order.includes(item)) {
+//       items.push(item)
+//       total += price
+//     }
+//   }
+
+//   const formattedOrder = `${items.join(" + ")}: \$${total.toFixed(2)}`
+
+//   console.log(formattedOrder)
+//   return (formattedOrder);
+// }
+
+// formatCoffeeOrder("I'd like an oat latte with vanilla syrup and an extra shot please.")
