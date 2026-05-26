@@ -14,6 +14,7 @@ function sumOfDifferences(arr) {
   }, [])
 
   const diffSum = sumOfArray(toAdd)
+  
   console.log(diffSum)
   return diffSum;
 }
